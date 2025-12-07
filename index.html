@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bisikan Sufi</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -12,31 +13,26 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">Tentang</a>
+      <button id="theme-toggle">🌙 / ☀️</button>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero fade-in">
     <h2>Temukan Ketenangan Hati & Suara Batin</h2>
     <p>Dengarkan bisikan batinmu, dan rasakan cahaya kesadaran menuntun langkahmu.</p>
     <a class="btn" href="#quote">Dengarkan Bisikan</a>
   </section>
 
-  <section class="quote-section" id="quote">
+  <section class="quote-section fade-in" id="quote">
     <h3>Quote Hari Ini</h3>
     <p id="daily-quote">Memuat...</p>
-  </section>
-
-  <section class="video-section">
-    <h3>Video Inspiratif</h3>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/BqvsdnBKv7g" title="Bisikan Sufi" frameborder="0" allowfullscreen></iframe>
+    <div class="share-buttons">
+      <button id="share-whatsapp">WhatsApp</button>
+      <button id="share-twitter">Twitter</button>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Bisikan Sufi. Semua hak dilindungi.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
+  <section class="video-section fade-in">
+    <h3>Playlist Video Inspiratif</h3>
+    <div class="video-wrapper">
+      <div class="video-item" data-video="https://www.
