@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#080b14">
   <meta name="color-scheme" content="dark light">
-  <meta name="description" content="Bisikan Sufi adalah ruang hening digital untuk renungan harian, latihan napas, suara ambient, dan jurnal pribadi yang tersimpan di perangkat Anda.">
-  <meta name="keywords" content="Bisikan Sufi, renungan, meditasi, ketenangan, jurnal, latihan napas, spiritual">
+  <meta name="description" content="Bisikan Sufi adalah ruang hening digital dengan generator renungan lokal tanpa API, latihan napas, suara ambient, dan jurnal pribadi.">
+  <meta name="keywords" content="Bisikan Sufi, renungan, generator renungan, meditasi, ketenangan, jurnal, latihan napas, spiritual">
   <meta name="author" content="Bisikan Sufi">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bisikan Sufi — Ruang Hening Digital">
-  <meta property="og:description" content="Berhenti sejenak. Atur napas. Dengarkan hati.">
+  <meta property="og:description" content="Renungan baru dirangkai langsung di perangkat Anda. Tanpa akun, tanpa API, tetap privat.">
   <meta property="og:url" content="https://slee17an-spec.github.io/abdi/">
   <meta property="og:image" content="https://slee17an-spec.github.io/abdi/assets/icon.svg">
   <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,7 @@
     "url": "https://slee17an-spec.github.io/abdi/",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Any",
-    "description": "Ruang hening digital untuk renungan, latihan napas, suara ambient, dan jurnal pribadi.",
+    "description": "Ruang hening digital dengan generator renungan lokal, latihan napas, suara ambient, dan jurnal pribadi.",
     "inLanguage": "id"
   }
   </script>
@@ -55,7 +55,7 @@
       <a href="#napas">Napas</a>
       <a href="#suara">Suara</a>
       <a href="#jurnal">Jurnal</a>
-      <a href="#koleksi">Koleksi</a>
+      <a href="#koleksi">Aliran</a>
     </nav>
 
     <div class="header-actions">
@@ -74,15 +74,15 @@
       <div class="hero-copy reveal">
         <p class="eyebrow" id="greeting">Selamat datang di ruang hening</p>
         <h1 id="hero-title">Heninglah…<br><span>ada sesuatu yang ingin menyentuh jiwamu.</span></h1>
-        <p class="hero-lead">Satu tempat untuk memperlambat langkah, mengatur napas, menulis isi hati, dan membawa pulang satu renungan sederhana.</p>
+        <p class="hero-lead">Satu ruang untuk memperlambat langkah, mengatur napas, menulis isi hati, dan menerima renungan baru yang dirangkai langsung di perangkat Anda.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#renungan">Dengarkan bisikan</a>
-          <a class="button button-ghost" href="#napas">Mulai 3 menit hening</a>
+          <a class="button button-ghost" href="#koleksi">Buka aliran renungan</a>
         </div>
         <div class="hero-meta" aria-label="Ringkasan pengalaman">
-          <span><strong id="quote-count">0</strong> renungan</span>
+          <span><strong id="quote-count">∞</strong> kemungkinan</span>
           <span><strong id="streak-count">0</strong> hari hening</span>
-          <span><strong>100%</strong> privat</span>
+          <span><strong>100%</strong> lokal & privat</span>
         </div>
       </div>
 
@@ -105,7 +105,7 @@
           <p class="eyebrow">Renungan hari ini</p>
           <h2 id="renungan-title">Satu kalimat untuk dibawa pulang</h2>
         </div>
-        <p>Renungan berganti setiap hari, tetapi Anda dapat meminta bisikan baru kapan saja.</p>
+        <p>Renungan harian tersusun secara konsisten dari tanggal hari ini. Tombol “Bisikan baru” membuat kalimat segar tanpa menghubungi server.</p>
       </div>
 
       <article class="quote-feature reveal" aria-live="polite">
@@ -114,8 +114,8 @@
           <span class="pill" id="quote-category">Hening</span>
           <time id="today-label"></time>
         </div>
-        <blockquote id="daily-quote">Memuat renungan…</blockquote>
-        <p class="quote-source" id="quote-source">— Renungan Bisikan Sufi</p>
+        <blockquote id="daily-quote">Merangkai renungan…</blockquote>
+        <p class="quote-source" id="quote-source">— Bisikan yang dirangkai di perangkatmu</p>
         <div class="quote-actions" aria-label="Tindakan renungan">
           <button class="button button-primary" id="new-quote" type="button">Bisikan baru</button>
           <button class="button button-ghost" id="favorite-quote" type="button" aria-pressed="false">♡ Simpan</button>
@@ -246,10 +246,30 @@
     <section class="section-shell section-block" id="koleksi" aria-labelledby="koleksi-title">
       <div class="section-heading reveal">
         <div>
-          <p class="eyebrow">Perpustakaan renungan</p>
-          <h2 id="koleksi-title">Temukan kata yang Anda perlukan</h2>
+          <p class="eyebrow">Generator renungan lokal</p>
+          <h2 id="koleksi-title">Aliran renungan tanpa akhir</h2>
         </div>
-        <p>Cari berdasarkan tema, lalu simpan renungan yang ingin dibaca kembali.</p>
+        <p>Setiap batch dirangkai di browser dari struktur bahasa terkurasi. Tidak memakai API, akun, database, atau koleksi tetap.</p>
+      </div>
+
+      <div class="generator-panel reveal">
+        <div class="generator-copy">
+          <span class="generator-icon" aria-hidden="true">∞</span>
+          <div>
+            <strong>Mesin renungan lokal aktif</strong>
+            <p><span id="generated-count">0</span> renungan telah dirangkai dalam sesi ini. Hanya favorit yang disimpan.</p>
+          </div>
+        </div>
+        <div class="generator-actions">
+          <label class="select-field generator-theme-field">
+            <span class="sr-only">Tema renungan baru</span>
+            <select id="generator-theme">
+              <option value="all">Tema campuran</option>
+            </select>
+          </label>
+          <button class="button button-primary" id="generate-batch" type="button">Rangkai 9 bisikan</button>
+          <button class="button button-ghost" id="reset-stream" type="button">Aliran baru</button>
+        </div>
       </div>
 
       <div class="library-tools reveal">
@@ -273,7 +293,7 @@
       <div class="quote-grid" id="quote-grid" aria-live="polite"></div>
       <p class="empty-state" id="empty-state" hidden>Tidak ada renungan yang cocok.</p>
       <div class="centered reveal">
-        <button class="button button-ghost" id="load-more" type="button">Tampilkan lebih banyak</button>
+        <button class="button button-ghost load-more-button" id="load-more" type="button">Rangkai 9 bisikan berikutnya</button>
       </div>
     </section>
 
@@ -304,7 +324,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <canvas id="quote-canvas" width="1080" height="1080" hidden></canvas>
   <noscript>
-    <div class="noscript">Bisikan Sufi memerlukan JavaScript untuk fitur napas, jurnal, dan renungan interaktif.</div>
+    <div class="noscript">Bisikan Sufi memerlukan JavaScript untuk fitur napas, jurnal, dan generator renungan.</div>
   </noscript>
   <script src="js/script.js" defer></script>
 </body>
