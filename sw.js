@@ -1,11 +1,11 @@
-const CACHE_NAME = 'bisikan-sufi-v2.0.0';
+const CACHE_NAME = 'bisikan-sufi-v3.0.0';
 const APP_SHELL = [
   './',
   './index.html',
   './about.html',
+  './404.html',
   './css/style.css',
   './js/script.js',
-  './assets/quotes.json',
   './assets/icon.svg',
   './manifest.webmanifest'
 ];
