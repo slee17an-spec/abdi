@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://slee17an-spec.github.io/abdi/sitemap.xml

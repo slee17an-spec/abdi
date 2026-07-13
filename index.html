@@ -1,38 +1,311 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="id" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bisikan Sufi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Bisikan Sufi adalah ruang hening digital untuk renungan harian, latihan napas, suara ambient, dan jurnal pribadi yang tersimpan di perangkat Anda.">
+  <meta name="keywords" content="Bisikan Sufi, renungan, meditasi, ketenangan, jurnal, latihan napas, spiritual">
+  <meta name="author" content="Bisikan Sufi">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bisikan Sufi — Ruang Hening Digital">
+  <meta property="og:description" content="Berhenti sejenak. Atur napas. Dengarkan hati.">
+  <meta property="og:url" content="https://slee17an-spec.github.io/abdi/">
+  <meta property="og:image" content="https://slee17an-spec.github.io/abdi/assets/icon.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://slee17an-spec.github.io/abdi/">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <title>Bisikan Sufi — Ruang Hening Digital</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Bisikan Sufi",
+    "url": "https://slee17an-spec.github.io/abdi/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Any",
+    "description": "Ruang hening digital untuk renungan, latihan napas, suara ambient, dan jurnal pribadi.",
+    "inLanguage": "id"
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Bisikan Sufi</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">Tentang</a>
-      <button id="theme-toggle">🌙 / ☀️</button>
+  <a class="skip-link" href="#main">Lewati ke isi utama</a>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Bisikan Sufi, kembali ke atas">
+      <span class="brand-mark" aria-hidden="true">ب</span>
+      <span>
+        <strong>Bisikan Sufi</strong>
+        <small>Ruang hening digital</small>
+      </span>
+    </a>
+
+    <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+      <a href="#renungan">Renungan</a>
+      <a href="#napas">Napas</a>
+      <a href="#suara">Suara</a>
+      <a href="#jurnal">Jurnal</a>
+      <a href="#koleksi">Koleksi</a>
     </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="motion-toggle" type="button" aria-label="Kurangi animasi" title="Kurangi animasi">
+        <span aria-hidden="true">◌</span>
+      </button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Ganti tema" title="Ganti tema">
+        <span id="theme-icon" aria-hidden="true">☾</span>
+      </button>
+      <button class="button button-small install-button" id="install-button" type="button" hidden>Pasang aplikasi</button>
+    </div>
   </header>
 
-  <section class="hero fade-in">
-    <h2>Temukan Ketenangan Hati & Suara Batin</h2>
-    <p>Dengarkan bisikan batinmu, dan rasakan cahaya kesadaran menuntun langkahmu.</p>
-    <a class="btn" href="#quote">Dengarkan Bisikan</a>
-  </section>
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" id="greeting">Selamat datang di ruang hening</p>
+        <h1 id="hero-title">Heninglah…<br><span>ada sesuatu yang ingin menyentuh jiwamu.</span></h1>
+        <p class="hero-lead">Satu tempat untuk memperlambat langkah, mengatur napas, menulis isi hati, dan membawa pulang satu renungan sederhana.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#renungan">Dengarkan bisikan</a>
+          <a class="button button-ghost" href="#napas">Mulai 3 menit hening</a>
+        </div>
+        <div class="hero-meta" aria-label="Ringkasan pengalaman">
+          <span><strong id="quote-count">0</strong> renungan</span>
+          <span><strong id="streak-count">0</strong> hari hening</span>
+          <span><strong>100%</strong> privat</span>
+        </div>
+      </div>
 
-  <section class="quote-section fade-in" id="quote">
-    <h3>Quote Hari Ini</h3>
-    <p id="daily-quote">Memuat...</p>
-    <div class="share-buttons">
-      <button id="share-whatsapp">WhatsApp</button>
-      <button id="share-twitter">Twitter</button>
+      <div class="hero-orbit reveal" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="moon">
+          <span>هُوَ</span>
+          <small>Dia</small>
+        </div>
+        <div class="star star-one"></div>
+        <div class="star star-two"></div>
+        <div class="star star-three"></div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="renungan" aria-labelledby="renungan-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Renungan hari ini</p>
+          <h2 id="renungan-title">Satu kalimat untuk dibawa pulang</h2>
+        </div>
+        <p>Renungan berganti setiap hari, tetapi Anda dapat meminta bisikan baru kapan saja.</p>
+      </div>
+
+      <article class="quote-feature reveal" aria-live="polite">
+        <div class="quote-glow" aria-hidden="true"></div>
+        <div class="quote-topline">
+          <span class="pill" id="quote-category">Hening</span>
+          <time id="today-label"></time>
+        </div>
+        <blockquote id="daily-quote">Memuat renungan…</blockquote>
+        <p class="quote-source" id="quote-source">— Renungan Bisikan Sufi</p>
+        <div class="quote-actions" aria-label="Tindakan renungan">
+          <button class="button button-primary" id="new-quote" type="button">Bisikan baru</button>
+          <button class="button button-ghost" id="favorite-quote" type="button" aria-pressed="false">♡ Simpan</button>
+          <button class="icon-button labeled" id="copy-quote" type="button"><span aria-hidden="true">⧉</span> Salin</button>
+          <button class="icon-button labeled" id="share-quote" type="button"><span aria-hidden="true">↗</span> Bagikan</button>
+          <button class="icon-button labeled" id="download-quote" type="button"><span aria-hidden="true">⇩</span> Kartu</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-shell section-block" id="napas" aria-labelledby="napas-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Ruang napas</p>
+          <h2 id="napas-title">Kembali ke saat ini</h2>
+        </div>
+        <p>Ikuti lingkaran: tarik perlahan, tahan, hembuskan, lalu diam sejenak.</p>
+      </div>
+
+      <div class="breath-layout">
+        <div class="breath-stage reveal">
+          <div class="breath-ring" id="breath-ring" data-phase="idle">
+            <div class="breath-core">
+              <span id="breath-phase">Siap</span>
+              <strong id="breath-countdown">3:00</strong>
+              <small id="breath-instruction">Duduk nyaman dan rilekskan bahu</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="breath-panel glass-card reveal">
+          <div class="field-group">
+            <span class="field-label">Durasi latihan</span>
+            <div class="segmented" id="duration-options" role="group" aria-label="Pilih durasi latihan">
+              <button type="button" data-minutes="1">1 menit</button>
+              <button type="button" data-minutes="3" class="active">3 menit</button>
+              <button type="button" data-minutes="5">5 menit</button>
+              <button type="button" data-minutes="10">10 menit</button>
+            </div>
+          </div>
+          <ol class="breath-steps">
+            <li><span>01</span><div><strong>Tarik</strong><small>4 detik melalui hidung</small></div></li>
+            <li><span>02</span><div><strong>Tahan</strong><small>4 detik tanpa memaksa</small></div></li>
+            <li><span>03</span><div><strong>Hembuskan</strong><small>6 detik dengan lembut</small></div></li>
+            <li><span>04</span><div><strong>Diam</strong><small>2 detik sebelum mengulang</small></div></li>
+          </ol>
+          <div class="button-row">
+            <button class="button button-primary" id="breath-start" type="button">Mulai latihan</button>
+            <button class="button button-ghost" id="breath-reset" type="button">Atur ulang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="suara" aria-labelledby="suara-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Suara ambient</p>
+          <h2 id="suara-title">Temani sunyi, tanpa mengganggunya</h2>
+        </div>
+        <p>Suara dibuat langsung oleh browser. Tidak ada berkas audio besar dan tidak ada pelacakan.</p>
+      </div>
+
+      <div class="sound-grid">
+        <button class="sound-card reveal active" type="button" data-sound="drone" aria-pressed="true">
+          <span class="sound-icon">◉</span>
+          <strong>Ruang Hening</strong>
+          <small>Dengung hangat dan lembut</small>
+        </button>
+        <button class="sound-card reveal" type="button" data-sound="rain" aria-pressed="false">
+          <span class="sound-icon">⋮</span>
+          <strong>Hujan Jauh</strong>
+          <small>Butir hujan yang menenangkan</small>
+        </button>
+        <button class="sound-card reveal" type="button" data-sound="wind" aria-pressed="false">
+          <span class="sound-icon">≈</span>
+          <strong>Angin Malam</strong>
+          <small>Hembusan halus dan lapang</small>
+        </button>
+      </div>
+
+      <div class="audio-console glass-card reveal">
+        <button class="audio-play" id="audio-toggle" type="button" aria-pressed="false" aria-label="Putar suara ambient">
+          <span id="audio-play-icon" aria-hidden="true">▶</span>
+        </button>
+        <div class="audio-info">
+          <strong id="audio-title">Ruang Hening</strong>
+          <small id="audio-status">Siap diputar</small>
+        </div>
+        <label class="volume-control">
+          <span>Volume</span>
+          <input id="volume" type="range" min="0" max="100" value="35" aria-label="Volume suara ambient">
+        </label>
+        <div class="waveform" id="waveform" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="jurnal" aria-labelledby="jurnal-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Jurnal pribadi</p>
+          <h2 id="jurnal-title">Apa yang sedang berbicara di dalam hati?</h2>
+        </div>
+        <p>Tulisan disimpan hanya di perangkat ini. Tidak dikirim ke server mana pun.</p>
+      </div>
+
+      <div class="journal-card reveal">
+        <div class="journal-date">
+          <span id="journal-day">Hari ini</span>
+          <time id="journal-date"></time>
+        </div>
+        <label class="sr-only" for="journal-entry">Isi jurnal pribadi</label>
+        <textarea id="journal-entry" rows="10" maxlength="5000" placeholder="Tuliskan yang terasa berat, yang disyukuri, atau satu niat kecil untuk hari ini…"></textarea>
+        <div class="journal-footer">
+          <span id="journal-status" role="status">Belum ada perubahan</span>
+          <span><strong id="word-count">0</strong> kata</span>
+          <div class="button-row compact">
+            <button class="button button-ghost" id="journal-export" type="button">Ekspor</button>
+            <button class="button button-ghost danger" id="journal-clear" type="button">Hapus</button>
+            <button class="button button-primary" id="journal-save" type="button">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="koleksi" aria-labelledby="koleksi-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Perpustakaan renungan</p>
+          <h2 id="koleksi-title">Temukan kata yang Anda perlukan</h2>
+        </div>
+        <p>Cari berdasarkan tema, lalu simpan renungan yang ingin dibaca kembali.</p>
+      </div>
+
+      <div class="library-tools reveal">
+        <label class="search-field">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Cari renungan</span>
+          <input id="quote-search" type="search" placeholder="Cari kata atau tema…" autocomplete="off">
+        </label>
+        <label class="select-field">
+          <span class="sr-only">Pilih kategori</span>
+          <select id="category-filter">
+            <option value="all">Semua kategori</option>
+          </select>
+        </label>
+        <label class="check-field">
+          <input id="favorites-filter" type="checkbox">
+          <span>Hanya tersimpan</span>
+        </label>
+      </div>
+
+      <div class="quote-grid" id="quote-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Tidak ada renungan yang cocok.</p>
+      <div class="centered reveal">
+        <button class="button button-ghost" id="load-more" type="button">Tampilkan lebih banyak</button>
+      </div>
+    </section>
+
+    <section class="section-shell closing-section reveal" aria-labelledby="closing-title">
+      <p class="eyebrow">Sebelum kembali</p>
+      <h2 id="closing-title">Jangan buru-buru meninggalkan sunyi.</h2>
+      <p>Bawa satu napas yang lebih tenang ke dalam langkah berikutnya.</p>
+      <a class="button button-primary" href="#top">Kembali ke awal</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">ب</span>
+        <span><strong>Bisikan Sufi</strong><small>Hening yang menuntun pulang</small></span>
+      </a>
+      <p>Ruang refleksi digital. Bukan pengganti bimbingan agama, psikologis, atau medis profesional.</p>
     </div>
-  </section>
+    <div class="footer-links">
+      <a href="about.html">Tentang</a>
+      <a href="#jurnal">Privasi jurnal</a>
+      <a href="https://github.com/slee17an-spec/abdi" rel="noopener noreferrer">Kode sumber</a>
+    </div>
+    <p>© <span id="year"></span> Bisikan Sufi. Dibuat dengan niat baik.</p>
+  </footer>
 
-  <section class="video-section fade-in">
-    <h3>Playlist Video Inspiratif</h3>
-    <div class="video-wrapper">
-      <div class="video-item" data-video="https://www.
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="quote-canvas" width="1080" height="1080" hidden></canvas>
+  <noscript>
+    <div class="noscript">Bisikan Sufi memerlukan JavaScript untuk fitur napas, jurnal, dan renungan interaktif.</div>
+  </noscript>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

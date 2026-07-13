@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ikon Bisikan Sufi</title>
+  <desc id="desc">Bulan sabit dan huruf Arab ba pada langit malam.</desc>
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="25%" r="90%">
+      <stop offset="0" stop-color="#273262"/>
+      <stop offset=".55" stop-color="#12182f"/>
+      <stop offset="1" stop-color="#080b16"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff2c4"/>
+      <stop offset=".45" stop-color="#d9b66f"/>
+      <stop offset="1" stop-color="#8d6a36"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="330" cy="194" r="112" fill="url(#gold)"/>
+  <circle cx="378" cy="155" r="112" fill="#11172c"/>
+  <circle cx="129" cy="128" r="5" fill="#f7e8b7" opacity=".8"/>
+  <circle cx="190" cy="90" r="3" fill="#f7e8b7" opacity=".65"/>
+  <circle cx="395" cy="322" r="4" fill="#f7e8b7" opacity=".7"/>
+  <text x="256" y="348" text-anchor="middle" font-family="serif" font-size="190" fill="url(#gold)">ب</text>
+  <circle cx="256" cy="389" r="10" fill="#d9b66f"/>
+</svg>
