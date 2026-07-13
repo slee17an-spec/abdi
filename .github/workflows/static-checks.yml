@@ -21,25 +21,44 @@ jobs:
           node-version: '22'
 
       - name: Check JavaScript syntax
-        run: node --check js/script.js
-
-      - name: Validate JSON files
         run: |
-          node -e "JSON.parse(require('fs').readFileSync('assets/quotes.json', 'utf8'))"
-          node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
+          node --check js/script.js
+          node --check js/app.js
+          node --check js/wellbeing.js
+          node --check js/reflection-bank.js
+          node --check js/reflection-bank-a.js
+          node --check js/reflection-bank-b.js
+          node --check sw.js
+
+      - name: Validate manifest
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
 
       - name: Validate project references
         run: |
           test -f index.html
           test -f css/style.css
+          test -f css/theme.css
+          test -f css/components.css
+          test -f css/responsive.css
           test -f js/script.js
-          test -f assets/quotes.json
+          test -f js/app.js
+          test -f js/wellbeing.js
+          test -f js/reflection-bank.js
+          test -f js/reflection-bank-a.js
+          test -f js/reflection-bank-b.js
           test -f sw.js
+          test -f assets/icon.svg
           grep -q 'css/style.css' index.html
           grep -q 'js/script.js' index.html
+          grep -q "import('./app.js')" js/script.js
           grep -q 'manifest.webmanifest' index.html
+          grep -q 'reflectionBank' js/app.js
+          grep -q 'Generator renungan lokal' index.html
+          ! test -f assets/quotes.json
+          ! grep -q 'quotes.json' sw.js
+          ! grep -R "fetch('assets/quotes.json'" js
 
-      - name: Parse HTML and XML
+      - name: Parse HTML XML and CSS structure
         run: |
           python - <<'PY'
           from html.parser import HTMLParser
@@ -57,4 +76,9 @@ jobs:
 
           ET.parse('sitemap.xml')
           print('OK: sitemap.xml')
+
+          for filename in ('css/style.css', 'css/theme.css', 'css/components.css', 'css/responsive.css'):
+              css = Path(filename).read_text(encoding='utf-8')
+              assert css.count('{') == css.count('}'), f'CSS braces are not balanced: {filename}'
+              print(f'OK: {filename}')
           PY
