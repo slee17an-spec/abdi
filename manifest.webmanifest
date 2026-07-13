@@ -1,0 +1,27 @@
+{
+  "name": "Bisikan Sufi — Ruang Hening Digital",
+  "short_name": "Bisikan Sufi",
+  "description": "Renungan harian, latihan napas, suara ambient, dan jurnal pribadi.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "categories": ["lifestyle", "health", "education"],
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {"name":"Renungan Hari Ini","short_name":"Renungan","url":"./#renungan"},
+    {"name":"Latihan Napas","short_name":"Napas","url":"./#napas"},
+    {"name":"Jurnal Pribadi","short_name":"Jurnal","url":"./#jurnal"}
+  ]
+}

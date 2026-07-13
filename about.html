@@ -1,34 +1,82 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="id" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tentang Bisikan Sufi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Tentang Bisikan Sufi, ruang hening digital yang mengutamakan ketenangan, privasi, dan aksesibilitas.">
+  <link rel="canonical" href="https://slee17an-spec.github.io/abdi/about.html">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <title>Tentang — Bisikan Sufi</title>
 </head>
-<body>
-  <header>
-    <h1>Bisikan Sufi</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">Tentang</a>
+<body class="about-page">
+  <a class="skip-link" href="#main">Lewati ke isi utama</a>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">ب</span>
+      <span><strong>Bisikan Sufi</strong><small>Ruang hening digital</small></span>
+    </a>
+    <nav class="main-nav simple-nav" aria-label="Navigasi halaman">
+      <a href="index.html#renungan">Renungan</a>
+      <a href="index.html#napas">Napas</a>
+      <a href="index.html#jurnal">Jurnal</a>
     </nav>
+    <a class="button button-small button-ghost" href="index.html">Kembali</a>
   </header>
 
-  <section class="about">
-    <h2>Tentang Bisikan Sufi</h2>
-    <p>
-      "Bisikan Sufi" adalah ruang spiritual yang menuntun Anda mendengar suara hati,  
-      memahami pesan batin, dan menemukan ketenangan dalam kesadaran diri.  
-      Setiap bisikan membawa kita lebih dekat pada cahaya dan kedamaian batin.
-    </p>
-    <p>
-      Temukan video inspiratif, quotes harian, dan refleksi spiritual yang membantu perjalanan batin Anda.
-    </p>
-  </section>
+  <main id="main" class="about-main section-shell">
+    <section class="about-hero reveal">
+      <p class="eyebrow">Tentang proyek</p>
+      <h1>Teknologi yang tidak meminta perhatian,<br><span>tetapi mengembalikannya.</span></h1>
+      <p>Bisikan Sufi dirancang sebagai ruang jeda: ringan, tenang, dapat digunakan tanpa akun, dan tetap berguna saat koneksi internet terputus.</p>
+    </section>
 
-  <footer>
-    <p>© 2025 Bisikan Sufi. Semua hak dilindungi.</p>
+    <section class="values-grid">
+      <article class="glass-card reveal">
+        <span class="value-number">01</span>
+        <h2>Hening lebih utama</h2>
+        <p>Antarmuka tidak dipenuhi notifikasi, iklan, penghitung popularitas, atau elemen yang memaksa pengguna terus menatap layar.</p>
+      </article>
+      <article class="glass-card reveal">
+        <span class="value-number">02</span>
+        <h2>Privasi secara bawaan</h2>
+        <p>Jurnal, renungan tersimpan, preferensi tema, dan riwayat latihan disimpan di browser perangkat Anda melalui penyimpanan lokal.</p>
+      </article>
+      <article class="glass-card reveal">
+        <span class="value-number">03</span>
+        <h2>Ringan dan terbuka</h2>
+        <p>Tidak memakai framework besar atau layanan pihak ketiga. Kode dapat dipelajari, diperiksa, dan dikembangkan langsung dari GitHub.</p>
+      </article>
+    </section>
+
+    <section class="about-copy reveal">
+      <div>
+        <p class="eyebrow">Batas yang jelas</p>
+        <h2>Renungan, bukan fatwa.</h2>
+      </div>
+      <div>
+        <p>Teks di dalam aplikasi adalah renungan orisinal untuk membantu refleksi pribadi. Teks tersebut tidak diklaim sebagai kutipan tokoh tertentu dan tidak menggantikan bimbingan ulama, tenaga kesehatan mental, atau tenaga medis.</p>
+        <p>Latihan napas dibuat lembut dan sederhana. Hentikan latihan bila terasa pusing, sesak, atau tidak nyaman.</p>
+      </div>
+    </section>
+
+    <section class="closing-section reveal">
+      <p class="eyebrow">Mulai dari satu napas</p>
+      <h2>Ketenangan tidak selalu harus dicari jauh.</h2>
+      <p>Kadang ia menunggu ketika kita berhenti sejenak.</p>
+      <a class="button button-primary" href="index.html#napas">Masuk ke ruang napas</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bisikan Sufi.</p>
+    <a href="https://github.com/slee17an-spec/abdi" rel="noopener noreferrer">Lihat kode sumber</a>
   </footer>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
