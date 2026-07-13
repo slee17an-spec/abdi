@@ -33,8 +33,18 @@ Sistem ini bukan model AI generatif, tetapi memberikan aliran konten yang sangat
 ├── index.html
 ├── about.html
 ├── 404.html
-├── css/style.css
-├── js/script.js
+├── css/
+│   ├── style.css
+│   ├── theme.css
+│   ├── components.css
+│   └── responsive.css
+├── js/
+│   ├── script.js
+│   ├── app.js
+│   ├── wellbeing.js
+│   ├── reflection-bank.js
+│   ├── reflection-bank-a.js
+│   └── reflection-bank-b.js
 ├── assets/icon.svg
 ├── manifest.webmanifest
 ├── sw.js
@@ -42,6 +52,8 @@ Sistem ini bukan model AI generatif, tetapi memberikan aliran konten yang sangat
 ├── sitemap.xml
 └── .github/workflows/static-checks.yml
 ```
+
+`js/script.js` hanya bertindak sebagai bootstrap ringan untuk memuat aplikasi modular dari `js/app.js`.
 
 ## Menjalankan secara lokal
 
