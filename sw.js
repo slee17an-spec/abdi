@@ -1,11 +1,19 @@
-const CACHE_NAME = 'bisikan-sufi-v3.0.0';
+const CACHE_NAME = 'bisikan-sufi-v3.1.0';
 const APP_SHELL = [
   './',
   './index.html',
   './about.html',
   './404.html',
   './css/style.css',
+  './css/theme.css',
+  './css/components.css',
+  './css/responsive.css',
   './js/script.js',
+  './js/app.js',
+  './js/wellbeing.js',
+  './js/reflection-bank.js',
+  './js/reflection-bank-a.js',
+  './js/reflection-bank-b.js',
   './assets/icon.svg',
   './manifest.webmanifest'
 ];
