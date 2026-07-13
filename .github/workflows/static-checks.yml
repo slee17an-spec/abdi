@@ -21,25 +21,29 @@ jobs:
           node-version: '22'
 
       - name: Check JavaScript syntax
-        run: node --check js/script.js
-
-      - name: Validate JSON files
         run: |
-          node -e "JSON.parse(require('fs').readFileSync('assets/quotes.json', 'utf8'))"
-          node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
+          node --check js/script.js
+          node --check sw.js
+
+      - name: Validate manifest
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest', 'utf8'))"
 
       - name: Validate project references
         run: |
           test -f index.html
           test -f css/style.css
           test -f js/script.js
-          test -f assets/quotes.json
           test -f sw.js
+          test -f assets/icon.svg
           grep -q 'css/style.css' index.html
           grep -q 'js/script.js' index.html
           grep -q 'manifest.webmanifest' index.html
+          grep -q 'reflectionBank' js/script.js
+          grep -q 'Generator renungan lokal' index.html
+          ! grep -q 'quotes.json' sw.js
+          ! grep -q "fetch('assets/quotes.json'" js/script.js
 
-      - name: Parse HTML and XML
+      - name: Parse HTML, XML, and CSS structure
         run: |
           python - <<'PY'
           from html.parser import HTMLParser
@@ -57,4 +61,8 @@ jobs:
 
           ET.parse('sitemap.xml')
           print('OK: sitemap.xml')
+
+          css = Path('css/style.css').read_text(encoding='utf-8')
+          assert css.count('{') == css.count('}'), 'CSS braces are not balanced'
+          print('OK: css/style.css')
           PY
